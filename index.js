@@ -19,6 +19,7 @@ let closeModalButton = document.getElementById('close-modal');
 let videoCarousel = document.getElementById('video-carousel');
 let demosLink = document.getElementById('demos-link');
 
+let clipboards = document.querySelectorAll('.copy');
 
 //***************************************/
 //functions
@@ -63,7 +64,7 @@ const displayNavListBullets = () => {
         .insertAdjacentHTML('afterbegin', 
             `<div class=bullet-container>
                 <img src=${'./images/oval-bullet-point.png'} 
-                width=10px height=8px class=bullet />
+                width=10px height=8px class=bullet alt=bullet-point />
             </div>`));
 }
 
@@ -82,6 +83,26 @@ function animateParagraph() {
         }
     }
 };
+
+
+const copyClip = (link) => {
+
+    const el = document.createElement('textarea');
+    el.value = link;
+    el.setAttribute('readonly', ''); 
+    el.style.position = 'absolute';                 
+    el.style.left = '-9999px';   
+    document.body.appendChild(el);  
+    el.select();                                    
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    document.querySelector('.copied').style.display = 'block';
+    setTimeout(() => {
+        document.querySelector('.copied').style.display = 'none';
+    }, 2000)
+    
+
+}
 
 
 //***************************** /
@@ -174,6 +195,19 @@ if (window.innerWidth <= 850) {
     })
     
 }
+
+contactModal.addEventListener('click', (e) => {
+    let clipArr = [...clipboards]
+    if (e.target === clipArr[0]) {
+        let email = document.querySelector('#email').innerText;
+        console.log(email);
+        copyClip(email)
+    } else if (e.target === clipArr[1]) {
+        let linkedin = document.querySelector('#linkedin').getAttribute('href');
+        console.log(linkedin)
+        copyClip(linkedin)
+    }
+})
 
 //************************************************/
 //function calls 

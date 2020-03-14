@@ -126,6 +126,37 @@ section #coding {
     font-size: 18px;
 }
 
+.cm-info div a:hover {
+    text-decoration: underline;
+}
+
+.c-to-c {
+    position: relative; 
+    top: 5px;
+    width: 25px;
+    height: auto;
+}
+
+.c-to-c .copy {
+    cursor: pointer;
+}
+
+.c-to-c .tooltip {
+    visibility: hidden;
+    position: absolute;
+    top: 35px;
+    width: 80px;
+    font-size: 8px;
+    opacity: 0;
+}
+
+.c-to-c:hover .tooltip {
+    opacity: 1;
+    visibility: visible; 
+    transition: opacity 1s ease-in-out;  
+    text-align: center; 
+}
+
 #close-modal {
     position: absolute;
     left: 50%;
@@ -241,7 +272,16 @@ section #coding {
     opacity: 0.8;
 }
 
-
+.copied {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(181, 181, 181);
+}
 
 @media (max-width: 850px) {
     * {
