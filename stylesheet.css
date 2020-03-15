@@ -12,9 +12,6 @@ button {
     outline: none;
 }
 
-.supreme {
-    height: 1000px;
-}
 
 main {
     margin: 1% 15%;
@@ -27,7 +24,6 @@ nav {
     width: 100%;
     justify-content: space-between;
 }
-
 
 .navlist:first-child {
     cursor: pointer;
@@ -238,9 +234,6 @@ section #coding {
 }
 
 
-
-
-
 @keyframes moveup {
     from { bottom: -500px }
     to { bottom: 0px }
@@ -275,25 +268,28 @@ section #coding {
 .copied {
     display: none;
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 5px;
+    padding: 15px;
     border-radius: 5px;
     background-color: rgb(181, 181, 181);
+    z-index: 10000;
 }
 
-@media (max-width: 850px) {
+@media screen and (max-width: 850px) {
+
     * {
-        font-size: 12px;
+        font-size: 18px;
     }
 
     h1 {
-        font-size: 12px;
+        font-size: 18px;
     }
 
     body {
         width: 100%;
+        overflow-x: hidden;
         overflow-y: scroll;    
     }
 
@@ -337,7 +333,7 @@ section #coding {
         margin-top: 15px;
         height: 100px;
         overflow-y: scroll;
-        padding: 10px;
+        padding: 0px 5px;
         border: 1px solid #000000;
     }
 
@@ -363,23 +359,76 @@ section #coding {
         height: 30px;
         content: '';
         margin: 0 auto;
-        transform: rotate(0deg);
     }
 
     #video-carousel {
+        display: flex;
         width: 100%;
         margin: 0 auto;
+        padding-top: 20px;
         overflow-y: hidden;
-        overflow-x: scroll;
-        height: 400px;
+        overflow-x: scroll;       
     }
 
     #video-carousel::-webkit-scrollbar {
         display: none;
     }
 
-    #video-carousel iframe {
-        padding-right: 20px;
+    
+    .video-container iframe {
+        display: block;
+        width: 380px;
+    }
+
+    #hide {
+        position: absolute;
+        left: 10px;
+        top: 2px;
+        z-index: 10000000;
+        padding: 1px;
+    }
+    
+    .time {
+        position: fixed;
+        bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 450) {
+   
+    body {
+        overflow-x: hidden;
+        font-size: 25px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .info-container {
+        height: auto;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    #video-carousel {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .video-container {
+        display: block;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .video-container iframe {
+        display: block;
+        width: 90%;
+    }
+
+    nav ul li {
+        font-size: 20px;
     }
 }
 
