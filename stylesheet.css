@@ -288,7 +288,6 @@ section #coding {
     }
 
     body {
-        width: 100%;
         overflow-x: hidden;
         overflow-y: scroll;    
     }
@@ -374,16 +373,21 @@ section #coding {
         display: none;
     }
 
-    
+    .video-container {
+        position: absolute;
+        left: 50px;
+        padding-top: 25px;
+        /* margin-left: 100px; */
+    }
+
     .video-container iframe {
         display: block;
-        width: 380px;
     }
 
     #hide {
         position: absolute;
         left: 10px;
-        top: 2px;
+        top: 0px;
         z-index: 10000000;
         padding: 1px;
     }
@@ -424,11 +428,15 @@ section #coding {
 
     .video-container iframe {
         display: block;
-        width: 90%;
+        /* width: 90%; */
     }
 
     nav ul li {
         font-size: 20px;
+    }
+
+    .time {
+        display: none;
     }
 }
 
