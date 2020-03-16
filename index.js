@@ -97,6 +97,7 @@ const copyClip = (link) => {
     document.execCommand('copy');
     document.body.removeChild(el);
     document.querySelector('.copied').style.display = 'block';
+
     setTimeout(() => {
         document.querySelector('.copied').style.display = 'none';
     }, 2000)
@@ -198,21 +199,26 @@ if (window.innerWidth <= 850) {
             slowScroll(0, 18, infoContainer);
         }
     })
-    
+    let spans = document.querySelectorAll('.tooltip span');
+    [...spans].map(node => {
+        node.style.display = 'none';
+    })
 }
 
 contactModal.addEventListener('click', (e) => {
     let clipArr = [...clipboards]
     if (e.target === clipArr[0]) {
         let email = document.querySelector('#email').innerText;
-        console.log(email);
         copyClip(email)
     } else if (e.target === clipArr[1]) {
         let linkedin = document.querySelector('#linkedin').getAttribute('href');
-        console.log(linkedin)
         copyClip(linkedin)
     }
 })
+
+
+
+
 
 //************************************************/
 //function calls 
