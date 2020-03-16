@@ -152,10 +152,8 @@ videoCarousel.addEventListener('click', (e) => {
 
     if (e.target === videos[1]) {
         videoContainer.scrollBy(500, 0);
-        // slowScroll(500, videoContainer);
     } else if (e.target === videos[0]) {
         videoContainer.scrollBy(-500, 0);
-        // slowScroll(-500, videoContainer);
     }
 });
 
@@ -199,10 +197,10 @@ function slowScroll(horiz, vert, node) {
 }
 
 if (window.innerWidth <= 850) {
-
+    
     infoContainer.addEventListener('click', (e) => {
         if (e.target === document.getElementById('music')) {
-            slowScroll(0, 18, infoContainer);
+            slowScroll(0, 15, infoContainer);
         }
     });
 
@@ -211,7 +209,7 @@ if (window.innerWidth <= 850) {
         node.style.display = 'none';
     });
 
-    
+
 }
 
 contactModal.addEventListener('click', (e) => {

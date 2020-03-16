@@ -287,16 +287,18 @@ section #coding {
         font-size: 18px;
     }
 
-    h1 {
-        font-size: 18px;
-    }
-
     body {
         display: flex;
         justify-content: center;
+        align-content: center;
+        align-items: center;
         max-width: 850px;
         overflow-x: hidden;
         overflow-y: scroll;    
+    }
+
+    h1 {
+        font-size: 18px;
     }
 
     .supreme {
@@ -429,6 +431,11 @@ section #coding {
         height: auto;
         margin-bottom: 0px;
         padding-bottom: 0px;
+    }
+
+    .info-container #music::before {
+        position: relative;
+        top: -40px;
     }
 
     #video-carousel {
