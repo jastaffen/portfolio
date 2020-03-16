@@ -165,6 +165,8 @@ section #coding {
     cursor: pointer;
     border: none;
     font-size: 20px;
+    width: 20px;
+    background-color: #fff;
 }
 
 #close-modal:active {
@@ -219,6 +221,7 @@ section #coding {
     position: absolute;
     left: 0px;
     top: -30px;
+    background-color: #fff;
     cursor: pointer;
     animation: fadein 2.5s;
     border: 1px solid black;
@@ -267,6 +270,7 @@ section #coding {
 
 .copied {
     display: none;
+    font-size: 10px;
     position: absolute;
     top: 30px;
     left: 50%;
@@ -283,13 +287,18 @@ section #coding {
         font-size: 18px;
     }
 
-    h1 {
-        font-size: 18px;
-    }
-
     body {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        max-width: 850px;
         overflow-x: hidden;
         overflow-y: scroll;    
+    }
+
+    h1 {
+        font-size: 18px;
     }
 
     .supreme {
@@ -330,7 +339,7 @@ section #coding {
     
     .info-container {
         margin-top: 15px;
-        height: 100px;
+        height: 200px;
         overflow-y: scroll;
         padding: 0px 5px;
         border: 1px solid #000000;
@@ -365,6 +374,7 @@ section #coding {
         width: 100%;
         margin: 0 auto;
         padding-top: 20px;
+        padding-bottom: 40px;
         overflow-y: hidden;
         overflow-x: scroll;       
     }
@@ -374,14 +384,22 @@ section #coding {
     }
 
     .video-container {
+        display: flex;
         position: absolute;
-        left: 50px;
         padding-top: 25px;
-        /* margin-left: 100px; */
+        justify-content: center;
+        align-items: center;
     }
 
     .video-container iframe {
         display: block;
+        width: 300px;
+        margin-right: 10px;
+        padding: 1%;
+    }
+
+    .video-container iframe:last-child {
+        padding-right: 20px;
     }
 
     #hide {
@@ -393,15 +411,15 @@ section #coding {
     }
     
     .time {
-        position: fixed;
-        bottom: 0px;
+        display: none;
     }
 }
 
 @media screen and (max-width: 450) {
    
     body {
-        overflow-x: hidden;
+        overflow-x: none;
+        overflow-y: scroll;
         font-size: 25px;
     }
 
@@ -413,6 +431,11 @@ section #coding {
         height: auto;
         margin-bottom: 0px;
         padding-bottom: 0px;
+    }
+
+    .info-container #music::before {
+        position: relative;
+        top: -40px;
     }
 
     #video-carousel {
@@ -428,7 +451,7 @@ section #coding {
 
     .video-container iframe {
         display: block;
-        /* width: 90%; */
+        width: 350;
     }
 
     nav ul li {

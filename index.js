@@ -69,7 +69,13 @@ const displayNavListBullets = () => {
 }
 
 function animateParagraph() {
+    
     let bio = document.getElementById('mini-bio');
+
+    if (window.innerWidth <= 850) {
+        bio.style.right = '-40px';
+        return;
+    }
     let right = -1000;
 
     let moveLeft = setInterval(goLeft, 10);
@@ -97,6 +103,7 @@ const copyClip = (link) => {
     document.execCommand('copy');
     document.body.removeChild(el);
     document.querySelector('.copied').style.display = 'block';
+
     setTimeout(() => {
         document.querySelector('.copied').style.display = 'none';
     }, 2000)
@@ -145,10 +152,8 @@ videoCarousel.addEventListener('click', (e) => {
 
     if (e.target === videos[1]) {
         videoContainer.scrollBy(500, 0);
-        // slowScroll(500, videoContainer);
     } else if (e.target === videos[0]) {
         videoContainer.scrollBy(-500, 0);
-        // slowScroll(-500, videoContainer);
     }
 });
 
@@ -192,27 +197,35 @@ function slowScroll(horiz, vert, node) {
 }
 
 if (window.innerWidth <= 850) {
-
+    
     infoContainer.addEventListener('click', (e) => {
         if (e.target === document.getElementById('music')) {
-            slowScroll(0, 18, infoContainer);
+            slowScroll(0, 15, infoContainer);
         }
-    })
-    
+    });
+
+    let spans = document.querySelectorAll('.tooltip span');
+    [...spans].map(node => {
+        node.style.display = 'none';
+    });
+
+
 }
 
 contactModal.addEventListener('click', (e) => {
     let clipArr = [...clipboards]
     if (e.target === clipArr[0]) {
         let email = document.querySelector('#email').innerText;
-        console.log(email);
         copyClip(email)
     } else if (e.target === clipArr[1]) {
         let linkedin = document.querySelector('#linkedin').getAttribute('href');
-        console.log(linkedin)
         copyClip(linkedin)
     }
 })
+
+
+
+
 
 //************************************************/
 //function calls 
