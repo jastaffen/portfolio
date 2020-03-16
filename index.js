@@ -69,7 +69,13 @@ const displayNavListBullets = () => {
 }
 
 function animateParagraph() {
+    
     let bio = document.getElementById('mini-bio');
+
+    if (window.innerWidth <= 850) {
+        bio.style.right = '-40px';
+        return;
+    }
     let right = -1000;
 
     let moveLeft = setInterval(goLeft, 10);
@@ -198,11 +204,14 @@ if (window.innerWidth <= 850) {
         if (e.target === document.getElementById('music')) {
             slowScroll(0, 18, infoContainer);
         }
-    })
+    });
+
     let spans = document.querySelectorAll('.tooltip span');
     [...spans].map(node => {
         node.style.display = 'none';
-    })
+    });
+
+    
 }
 
 contactModal.addEventListener('click', (e) => {

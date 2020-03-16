@@ -270,6 +270,7 @@ section #coding {
 
 .copied {
     display: none;
+    font-size: 10px;
     position: absolute;
     top: 30px;
     left: 50%;
@@ -452,10 +453,6 @@ section #coding {
 
     .time {
         display: none;
-    }
-
-    .copied {
-        top: 50px;
     }
 }
 
