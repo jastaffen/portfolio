@@ -283,7 +283,9 @@ section #coding {
 }
 
 .blogs {
-    margin-top: 20px;
+    margin-top: 50px;
+    position: relative;
+    top: 20px;
     display: flex;
     justify-content: center;
     width: 14%;
@@ -298,6 +300,7 @@ section #coding {
     position: relative;
     top: -10px;
 }
+
 
 .hover:hover {
     cursor: pointer;
@@ -333,6 +336,32 @@ section #coding {
     cursor: pointer;
 }
 
+#bi-title {
+    font-size: 30px;
+}
+
+@media screen and (max-width: 1250px) {
+    .blogs {
+        margin-left: 20px;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .blogs h1, img {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .embedly-card {
+        padding: 10px 2px;
+        height: auto;
+    }
+
+    #bi-title {
+        text-align: center;
+    }
+}
+
 
 @media screen and (max-width: 850px) {
 
@@ -346,8 +375,7 @@ section #coding {
         align-content: center;
         align-items: center;
         max-width: 850px;
-        overflow-x: hidden;
-        overflow-y: scroll;    
+        overflow-x: hidden;  
     }
 
     h1 {
@@ -466,6 +494,7 @@ section #coding {
     .time {
         display: none;
     }
+
 }
 
 @media screen and (max-width: 450) {

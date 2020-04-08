@@ -248,13 +248,16 @@ contactModal.addEventListener('click', (e) => {
         copyClip(linkedin)
     }
 })
+const blogsInitialState = blogs.innerHTML;
 
+const blogTitle = '<h1 id="bi-title">Blog Posts</h1><hr />';
 
 blogs.addEventListener('click', () => {
     blogs.classList.remove('hover');
+    blogs.insertAdjacentHTML('beforebegin', blogTitle);
     blogs.innerHTML = addBlogs(blogLinks);
-    // blogs.insertAdjacentHTML('beforebegin', `<button>hide blogs</button>`)
-    })
+})
+
 
 const addBlogs = () => {
     return blogLinks.map(blog => {
