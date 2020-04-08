@@ -309,8 +309,6 @@ section #coding {
 
 .embedly-card {
     padding: 10px 30px 0px 30px;
-    /* background: rgb(215, 215, 215); */
-    /* border: 1px solid black; */
     height: 500px;
 }
 
@@ -345,7 +343,6 @@ section #coding {
     .blogs {
         margin-left: 20px;
         flex-direction: column;
-        width: auto;
     }
 
     .blogs h1, img {
