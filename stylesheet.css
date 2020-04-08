@@ -339,27 +339,7 @@ section #coding {
     font-size: 30px;
 }
 
-@media screen and (max-width: 1250px) {
-    .blogs {
-        margin-left: 20px;
-        flex-direction: column;
-    }
 
-    .blogs h1, img {
-        text-align: center;
-        margin: 0 auto;
-        width: 100%;
-    }
-
-    .embedly-card {
-        padding: 10px 2px;
-        height: auto;
-    }
-
-    #bi-title {
-        text-align: center;
-    }
-}
 
 
 @media screen and (max-width: 850px) {
@@ -497,7 +477,26 @@ section #coding {
     .copied {
         font-size: 10px;
     }
+    
+    .blogs {
+        margin-left: 20px;
+        flex-direction: column;
+    }
 
+    .blogs h1, img {
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .embedly-card {
+        padding: 10px 2px;
+        height: auto;
+    }
+
+    #bi-title {
+        text-align: center;
+    }
 
     .embedly-card img {
         width: 375px;
