@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0px;
-    overflow: hidden;
+    overflow-x: hidden;
     font-size: 15px;
 }
 
@@ -191,7 +191,7 @@ section #coding {
     color: black;
     border: 1px solid black;
     border-radius: 50%;
-    padding: 40px;
+    padding: 70px;
     position: absolute;
     display: block;
     text-align: center;
@@ -221,15 +221,16 @@ section #coding {
     position: absolute;
     left: 0px;
     top: -30px;
+    font-size: 20px;
     background-color: #fff;
     cursor: pointer;
     animation: fadein 2.5s;
     border: 1px solid black;
     width: 25px;
     height: 25px;
-    padding: 5px;
+    padding: 0px;
     font-weight: 200;
-    text-align: center;
+    
 }
 
 #hide:active {
@@ -253,7 +254,7 @@ section #coding {
 
 
 .time {
-    position: fixed;
+    /* position: fixed; */
     bottom: -30px;
     width: 100%;
     height: 100px;
@@ -281,6 +282,88 @@ section #coding {
     z-index: 10000;
 }
 
+.blogs {
+    margin-top: 50px;
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 14%;
+    margin: 0 auto;
+}
+
+.blogs h1 {
+    margin-right: 10px;
+}
+
+.blogs img {
+    position: relative;
+    top: -10px;
+}
+
+
+.hover:hover {
+    cursor: pointer;
+    transform: translateY(-10px);
+}
+
+.embedly-card {
+    padding: 10px 30px 0px 30px;
+    /* background: rgb(215, 215, 215); */
+    /* border: 1px solid black; */
+    height: 500px;
+}
+
+.embedly-card h4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.embedly-card h4 img {
+    display: block;
+    margin-top: 20px;
+    width: 430px;
+    height: 250px;
+}
+
+.embedly-card p {
+    margin-top: 0px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.bi-link {
+    cursor: pointer;
+}
+
+#bi-title {
+    font-size: 30px;
+}
+
+@media screen and (max-width: 1250px) {
+    .blogs {
+        margin-left: 20px;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .blogs h1, img {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .embedly-card {
+        padding: 10px 2px;
+        height: auto;
+    }
+
+    #bi-title {
+        text-align: center;
+    }
+}
+
+
 @media screen and (max-width: 850px) {
 
     * {
@@ -293,8 +376,7 @@ section #coding {
         align-content: center;
         align-items: center;
         max-width: 850px;
-        overflow-x: hidden;
-        overflow-y: scroll;    
+        overflow-x: hidden;  
     }
 
     h1 {
@@ -413,6 +495,17 @@ section #coding {
     .time {
         display: none;
     }
+
+    .copied {
+        font-size: 10px;
+    }
+
+
+    .embedly-card img {
+        width: 375px;
+        height: 200px;
+    }
+
 }
 
 @media screen and (max-width: 450) {
@@ -460,6 +553,19 @@ section #coding {
 
     .time {
         display: none;
+    }
+
+    #hide {
+        margin-left: 10px;
+    }
+
+    .blogs {
+        width: auto;
+    }
+    
+    .embedly-card img {
+        width: 374px;
+        height: 200px
     }
 }
 
