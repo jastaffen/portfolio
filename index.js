@@ -1,16 +1,6 @@
 // imports
 const blogLinks = [
     {
-        url: "https://levelup.gitconnected.com/function-currying-in-javascript-46d7ccee1a0e",
-        title: "Function Currying in JavaScript",
-        description: `Function currying is a useful technique in 
-        functional programming that allows us to evaluate a function which 
-        would have taken multiple arguments into a function with a series of sequential inner
-        functions each with single arguments instead. Although not unique to JavaScript by any 
-        means, the technique is carried out in JavaScript by using closures`,
-        image: './images/currying.png'
-    },
-    {
         url: "https://levelup.gitconnected.com/what-are-proptypes-why-use-them-933744e7583e",
         title: "What are PropTypes and Why Do We Use Them?",
         description: `React can be used to seamlessly spin up sophisticated webs of data 
@@ -18,9 +8,21 @@ const blogLinks = [
         complex structure can just as seamlessly unravel and devolve into utter chaos and 
         darkness. One of the most helpful ways I’ve recently found to debug and manage data 
         flow in React has been with the use of PropTypes.`,
-        image: './images/giphy.gif'
+        image: './images/giphy.gif',
+        published: 'April 4, 2020'
 
-    }
+    },
+    {
+        url: "https://levelup.gitconnected.com/function-currying-in-javascript-46d7ccee1a0e",
+        title: "Function Currying in JavaScript",
+        description: `Function currying is a useful technique in 
+        functional programming that allows us to evaluate a function which 
+        would have taken multiple arguments into a function with a series of sequential inner
+        functions each with single arguments instead. Although not unique to JavaScript by any 
+        means, the technique is carried out in JavaScript by using closures`,
+        image: './images/currying.png',
+        published: 'March 29, 2020'
+    }  
 ]
 //constants
 
@@ -264,11 +266,11 @@ const addBlogs = () => {
         return `
         <div class="blogs-container">
             <blockquote class="embedly-card">
+                <h2>${blog.published}</h2>
                 <h4>
                     <a href="${blog.url}"target="_blank">
                         ${blog.title}
-                        <img class="bi-link" src="${blog.image}" 
-                        width="430" height="250" />
+                        <img class="bi-link" src="${blog.image}" />
                     </a>
                 </h4>
                 <p>
@@ -281,6 +283,8 @@ const addBlogs = () => {
         `
     })
 }
+
+
 
 //************************************************/
 //function calls 

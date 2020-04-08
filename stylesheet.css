@@ -310,8 +310,7 @@ section #coding {
 .embedly-card {
     padding: 10px 30px 0px 30px;
     /* background: rgb(215, 215, 215); */
-    background: white;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 500px;
 }
 
@@ -324,6 +323,8 @@ section #coding {
 .embedly-card h4 img {
     display: block;
     margin-top: 20px;
+    width: 430px;
+    height: 250px;
 }
 
 .embedly-card p {
@@ -495,6 +496,16 @@ section #coding {
         display: none;
     }
 
+    .copied {
+        font-size: 10px;
+    }
+
+
+    .embedly-card img {
+        width: 375px;
+        height: 200px;
+    }
+
 }
 
 @media screen and (max-width: 450) {
@@ -542,6 +553,19 @@ section #coding {
 
     .time {
         display: none;
+    }
+
+    #hide {
+        margin-left: 10px;
+    }
+
+    .blogs {
+        width: auto;
+    }
+    
+    .embedly-card img {
+        width: 374px;
+        height: 200px
     }
 }
 
