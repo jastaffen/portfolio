@@ -1,6 +1,16 @@
 // imports
 const blogLinks = [
     {
+        url: "https://medium.com/@jns368/building-cross-platform-mobile-applications-with-react-native-1e3e120e4a29",
+        title: "Building Cross-Platform Mobile Applications with React Native",
+        description: `While, React Native as a framework allows us to write consistently useable 
+        code for both iOS and Android, there are often times when we may want to or have to separate 
+        our code for the former and the latter devices to build the desired universal UI/logic. 
+        One way to do this is with the Platform`,
+        image: './images/cross-platform.gif',
+        published: 'April 12, 2020'
+    },
+    {
         url: "https://levelup.gitconnected.com/what-are-proptypes-why-use-them-933744e7583e",
         title: "What are PropTypes and Why Do We Use Them?",
         description: `React can be used to seamlessly spin up sophisticated webs of data 
