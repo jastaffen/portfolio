@@ -333,6 +333,7 @@ section #coding {
 
 .bi-link {
     cursor: pointer;
+    object-fit: contain;
 }
 
 #bi-title {

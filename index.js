@@ -1,6 +1,17 @@
 // imports
 const blogLinks = [
     {
+        url: "https://medium.com/@jns368/stacks-demonstration-through-a-mini-project-3767735ad5a1",
+        title: "Implementing Stacks with JavaScript: Demonstration through A Mini-Project",
+        description: `A stack is a linear data structure, meaning that elements are linked 
+        sequentially (one after another) just like a queue or a linked list. Think of a stack 
+        like a glass filled with various colored sands. Yes, I’m sure there are ways to extract 
+        the sand from the bottom, but it seems like it may take awhile. The best way to get to 
+        the pink sand in the image below is to remove what’s above it. Moreover, while it is...`,
+        image: './images/sand-bottle.jpg',
+        published: 'April 20, 2020'
+    },
+    {
         url: "https://medium.com/@jns368/building-cross-platform-mobile-applications-with-react-native-1e3e120e4a29",
         title: "Building Cross-Platform Mobile Applications with React Native",
         description: `While, React Native as a framework allows us to write consistently useable 
