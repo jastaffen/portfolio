@@ -1,6 +1,17 @@
 // imports
 const blogLinks = [
     {
+        url: "https://medium.com/@jns368/merge-sorted-linked-lists-with-jest-and-a-little-curveball-curveball-at-end-69d5eca73914",
+        title: "Merge Sorted Linked Lists — with Jest and A Little Curveball (CURVEBALL AT END)!",
+        description: `As I’ve dug my heels into algorithms and 
+        data structures, I felt as though this problem was particularly helpful 
+        in elucidating a lot about Linked Lists as a data structure, so I thought 
+        it would help to do a walkthrough of the problem along with some added
+        tips for algorithm practice I’ve found super helpful.`,
+        image: './images/node.png',
+        published: 'April 26, 2020'
+    },
+    {
         url: "https://medium.com/@jns368/stacks-demonstration-through-a-mini-project-3767735ad5a1",
         title: "Implementing Stacks with JavaScript: Demonstration through A Mini-Project",
         description: `A stack is a linear data structure, meaning that elements are linked 
